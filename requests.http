@@ -1,0 +1,41 @@
+### generar un Registro
+POST http://localhost:8080/api/pet
+content-type: application/json
+
+{
+    "name": "Puppy",
+    "type": "Dog",
+    "photoUrls": ["picture1.jpg"]
+}
+
+### generar un segundo Registro
+POST http://localhost:8080/api/pet
+content-type: application/json
+
+{
+    "name": "Miau",
+    "type": "cat",
+    "photoUrls": ["picture2.jpg"]
+}
+### obtener segundo registro
+
+GET http://localhost:8080/api/pet/2
+
+
+### actualizar segundo Registro
+
+PUT http://localhost:8080/api/pet/2
+content-type: application/json
+
+{
+    "name": "MichiMihci",
+    "type": "SupperCat",
+    "photoUrls": ["picture2222.jpg"]
+}
+
+### obtener segundo registro (otra vez)
+
+GET http://localhost:8080/api/pet/2
+
+### obtener todos los registros
+GET http://localhost:8080/api/pets
